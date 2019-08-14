@@ -1,0 +1,248 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito&display=swap);
+body {
+  font-family: "Nunito", sans-serif;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+div,
+p,
+figure {
+  padding: 0;
+  margin: 0;
+}
+
+.album-thumbnail {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  margin: 20px;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  background-color: pink;
+  position: relative;
+}
+.album-thumbnail__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 20px;
+}
+.delete-btn__album {
+  position: absolute;
+  font-size: 2rem;
+  color: black;
+  top: 0;
+  right: 10px;
+  cursor: pointer;
+  margin: 0;
+}
+.album__img-list {
+  display: flex;
+  max-width: 900px;
+  flex-wrap: wrap;
+}
+.album__img-placeholder {
+  list-style: none;
+  position: relative;
+  margin: 10px;
+}
+.delete-btn {
+  position: absolute;
+  font-size: 2rem;
+  right: 0;
+  top: -0.5rem;
+  cursor: pointer;
+  /* height: 1rem; */
+  /* background-color: red; */
+}
+.album__img {
+  width: 200px;
+}
+
+/*CAROUSEL*/
+.carousel-container {
+  position: relative;
+  width: 100vw;
+  min-height: 300px;
+  border: 2px solid pink;
+}
+.img-slide {
+  min-width: 200px;
+  min-height: 300px;
+  width: 100%;
+}
+.slide-arrowleft,
+.slide-arrowright {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.slide-arrowleft {
+  left: 10px;
+}
+.slide-arrowright {
+  right: 10px;
+}
+.indicator-wrap {
+  margin: 10px auto;
+  text-align: center;
+  width: 100vw;
+}
+.btn__edit-slideShow {
+  padding: 0px 20px;
+  cursor: pointer;
+}
+
+.modal__container {
+  position: fixed;
+  background-color: rgba(230, 230, 230, 0.63);
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+.modal__content-wrap {
+  min-width: 250px;
+  width: 80%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #b2d334;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 90vh;
+  overflow: auto;
+}
+.btn__close-modal-box {
+  position: absolute;
+  font-size: 2rem;
+  right: 10px;
+  top: -5px;
+  cursor: pointer;
+}
+/* .modal__img-container { 
+  max-width: 1200px;
+  max-height: 100vh;
+ 
+} */
+.modal__image {
+  width: 100%;
+}
+.carousel-img {
+  max-width: 200px;
+  max-height: 300px;
+  overflow: hidden;
+}
+.event-summary__wrapper {
+  width: 300px;
+  margin: 20px 0;
+  background-color: rgb(168, 168, 168);
+  padding: 10px 20px;
+}
+
+/*MENU*/
+.weekly-menu__container {
+  background-color: #d0d0d0;
+  padding: 20px;
+  position: relative;
+  margin: 20px 0;
+}
+/*EXCURSION*/
+.excur__excur-wrap {
+  max-width: 600px;
+  margin: 20px auto;
+  border: 1px pink solid;
+}
+.excur__top-wrap {
+  display: flex;
+  align-items: center;
+}
+.excur__excur-time {
+  width: 4.7rem;
+  padding: 0;
+  height: 4.7rem;
+  border-radius: 10px;
+  border: 1px solid #dddddd;
+  box-shadow: 3px 3px 3px #d3d3d3;
+  background-color: white;
+}
+.excur__excur-time li {
+  list-style: none;
+  /* box-shadow: 3px 3px 3px #d3d3d3; */
+}
+.excur__excur-month {
+  background-color: red;
+  text-transform: uppercase;
+  border-bottom: 1px solid #aaaaaa;
+  text-align: center;
+  color: white;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.2rem 0.2rem;
+  border-radius: 10px 10px 0 0;
+  position: relative;
+  border-bottom: 1px solid #dddddd;
+}
+.excur__excur-month::after,
+.excur__excur-month::before {
+  width: 0.25rem;
+  height: 0.6rem;
+  content: "";
+  background-color: black;
+  position: absolute;
+  top: -0.3rem;
+  border-radius: 15px;
+}
+.excur__excur-month::before {
+  left: 1.25rem;
+}
+.excur__excur-month::after {
+  right: 1.25rem;
+}
+.excur__excur-date {
+  font-size: 2rem;
+  text-align: center;
+  padding: 0.1rem 0.3rem;
+}
+.excur__excur-name {
+  font-size: 1.75rem;
+  padding: 1.5rem;
+}
+.excur__text-wrap {
+  display: flex;
+}
+.excur__img-wrap {
+  max-width: 200px;
+  min-width: 200px;
+}
+.excur__img {
+  width: 100%;
+}
+.excur__text {
+  padding: 0 20px;
+}
+.fa-plus-square {
+  color: #b2d334;
+  cursor: pointer;
+}
+.excur__form-wrap {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #c25454ca;
+}
+.excur__form {
+  background-color: #b2d334;
+}
